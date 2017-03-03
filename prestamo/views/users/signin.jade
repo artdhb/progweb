@@ -1,0 +1,28 @@
+extends ../templates/default
+
+block content
+  div(class="container")
+    div(class="row")
+      div(class="col-md-3")
+      div(class="col-md-6")
+        div(class="panel panel-default")
+          div(class="panel-heading text-center")
+            h5= " Iniciar sesión"   
+          div(class="panel-body")
+            form(role="form" method="post" action="http://localhost:3000/login")
+              div(class="form-group")
+                h2= "Ingresa tus datos"
+
+              if authmessage.length > 0
+                div(class="form-group")
+                  div(class="alert alert-danger" role="alert")= authmessage
+
+              div(class="form-group")
+                label(for="username" class="sr-only")="Nombre de usuario"
+                input(type="text" class="form-control" name="username" id="username" placeholder="Usuario" required autofocus)
+              div(class="form-group")
+                label(for="password" class="sr-only")="Contraseña"
+                input(type="password" class="form-control" name="password" id="password" placeholder="Contraseña" required)                 
+              br
+              button(type="submit" class="btn btn-lg btn-primary btn-block" name="login")="Iniciar sesión"
+      div(class="col-md-3")

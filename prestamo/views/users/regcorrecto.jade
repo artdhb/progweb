@@ -1,0 +1,16 @@
+extends ../templates/default
+
+block content
+  div(class="container")
+    div(class="row")
+      div(class="col-md-12")
+        div(class="panel panel-default")
+          div(class="panel-heading")
+            span(class="glyphicon glyphicon-ok-circle" aria-hidden="true")
+            |   Registro correcto   
+          div(class="panel-body text-center")
+            p= "¡Gracias por registrarte!"
+            br
+            p
+              a(href="http://localhost:3000/login")= "Inicia sesión"
+              |   para comenzar a usar tu cuenta.

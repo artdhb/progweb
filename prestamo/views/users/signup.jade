@@ -1,0 +1,28 @@
+extends ../templates/default
+
+block content
+  div(class="container")
+    div(class="jumbotron")
+      h1(class="text-center")="Registrarse"
+  div(class="container")
+    div(class="row")
+      div(class="col-md-3")
+      div(class="col-md-6")
+        div(class="panel panel-default")
+          div(class="panel-heading")
+            span(class="glyphicon glyphicon-info-sign" aria-hidden="true")
+            |   Introduce tus datos   
+          div(class="panel-body")
+            form(role="form" method="post" action="http://localhost:3000/registrarse")
+              div(class="form-group")
+                label="Nombre de usuario"
+                input(type="text" class="form-control" name="nombre" id="nombre")
+              div(class="form-group")
+                label="Contraseña"
+                input(type="password" class="form-control" name="password" id="password")                 
+              div(class="form-group")
+                label="Confirmar contraseña"
+                input(type="password" class="form-control" name="cpassword" id="cpassword")                       
+              br
+              button(type="submit" class="btn btn-default" name="enviar")="Registrarme"
+      div(class="col-md-3")

@@ -1,0 +1,34 @@
+block content
+  div(class="modal fade" id="modPrestamo" role="dialog")
+    div(class="modal-dialog")
+      div(class="modal-content")
+        div(class="modal-header")="Solicitar préstamo"
+        div(class="modal-body")
+          h3(class="modal-title")="Ingresa el monto del prestamo que deseas solicitar"
+          br
+          form(role="form" method="post" action="http://localhost:3000/nuevoprestamo")
+            div(class="form-group")
+              label="Usuario " + user.nombre
+            div(class="form-group")
+              label="Monto $"
+              input(type="number" class="form-control" name="monto" id="monto" min="0" placeholder="$ 0" required autofocus)
+            div(class="form-group")
+              button(type="submit" class="btn btn-primary")="Solicitar Préstamo"
+              button(type="button" class="btn btn-default" data-dismiss="modal")="Cerrar"
+
+  div(class="modal fade" id="modPago" role="dialog")
+    div(class="modal-dialog")
+      div(class="modal-content")
+        div(class="modal-header")="Realizar pago"
+        div(class="modal-body")
+          h3(class="modal-title")="Ingresa el monto del pago que deseas realizar"
+          br
+          form(role="form" method="post" action="http://localhost:3000/nuevopago")
+            div(class="form-group")
+              label="Usuario " + user.nombre
+            div(class="form-group")
+              label="Monto $"
+              input(type="number" class="form-control" name="montopago" id="montopago" min="0" placeholder="$ 0" required autofocus)
+            div(class="form-group")
+              button(type="submit" class="btn btn-primary")="Realizar pago"
+              button(type="button" class="btn btn-default" data-dismiss="modal")="Cerrar"

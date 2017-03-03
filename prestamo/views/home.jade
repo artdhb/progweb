@@ -1,0 +1,29 @@
+extends templates/default
+block content
+  div(class="container")
+    div(class="jumbotron")
+      if isAuthenticated
+        h1(class="text-center")="Bienvenido " + user.nombre
+      else 
+        h1(class="text-center")="Página inicial"
+  if isAuthenticated
+    div(class="container")
+      div(class="row")
+        div(class="col-md-3")
+          div(class="row")
+            div(class="col-md-12")
+              div(class="panel panel-default")
+                div(class="panel-heading text-center")= "Acciones"
+                div(class="panel-body")
+                  ul(class="nav nav-pills nav-stacked" id="actuser")
+                    li(role="presentation")
+                      a(data-toggle="modal" href="#modPrestamo")= "Solicitar préstamo"
+                    li(role="presentation")
+                      a(data-toggle="modal" href="#modPago")= "Realizar pago"
+                    li(role="presentation")
+                      a(href="http://localhost:3000/movimientos")= "Ver movimientos de " + user.nombre
+        div(class="col-md-8")
+          if pincorrecto.length > 0
+            div(class="form-group")
+                  div(class="alert alert-danger" role="alert")= pincorrecto
+    include estado/nuevo

@@ -1,0 +1,43 @@
+extends ../templates/default
+block content
+  div(class="container")
+    div(class="row")
+      div(class="col-md-12")
+        h2(class="header")= "Movimientos de " + user.nombre
+        hr
+    div(class="row")
+      div(class="col-md-12")
+        h2(class="header")= "Prestamos solicitados"
+        br
+    div(class="row")
+        div(class="col-md-12")
+          table(class="table table-hover")
+            thead
+              tr
+                th= "#"
+                th= "Monto $"
+                th= "Fecha del prestamo"
+            tbody
+              each prestamo in prestamos
+                tr
+                  td= prestamo.id
+                  td= "$ " + prestamo.monto
+                  td= prestamo.realizado_el
+    div(class="row")
+      div(class="col-md-12")
+        h2(class="header")= "Pagos realizados"
+        br
+    div(class="row")
+        div(class="col-md-12")
+          table(class="table table-hover")
+            thead
+              tr
+                th= "#"
+                th= "Monto $"
+                th= "Fecha del pago"
+            tbody
+              each pago in pagos
+                tr
+                  td= pago.id
+                  td= "$ " + pago.monto
+                  td= pago.realizado_el

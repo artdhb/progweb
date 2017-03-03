@@ -1,0 +1,21 @@
+extends ../templates/default
+block content
+  div(class="container")
+    div(class="row")
+      div(class="col-md-12")
+        h2(class="header")= "Estado de los usuarios"
+        hr
+    div(class="row")
+        div(class="col-md-12")
+          table(class="table table-hover")
+            thead
+              tr
+                th= "#"
+                th= "Nombre"
+                th= "Deuda actual"
+            tbody
+              each estado in estados
+                tr
+                  td= estado.id
+                  td= estado.nombre
+                  td= "$ " + estado.deuda

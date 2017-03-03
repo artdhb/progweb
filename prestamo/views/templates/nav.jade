@@ -1,0 +1,36 @@
+nav(class="navbar navbar-default navbar-static-top")
+  div(class="container")
+      div(class="navbar-header")
+        button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+          span(class="sr-only")="Este botón despliega la barra de navegación"
+          span(class="icon-bar")
+          span(class="icon-bar")
+          span(class="icon-bar")
+        a(class="navbar-brand" href="/")="Sistema de Préstamos"
+      div(id="navbar" class="navbar-collapse collapse")
+        ul(class="nav navbar-nav")
+          li
+            a(href="http://localhost:3000/estados")
+              span(class="glyphicon glyphicon-usd" aria-hidden="true")
+              |   Estado de usuarios
+          li
+            a(href="/listamovimientos")
+              span(class="glyphicon glyphicon-list-alt" aria-hidden="true")
+              |   Movimientos JSON
+        ul(class="nav navbar-nav navbar-right")
+          if isAuthenticated
+            li
+              a(href="#")= user.nombre
+            li
+              a(href="http://localhost:3000/logout")
+                span(class="glyphicon glyphicon-log-out" aria-hidden="true")
+                |   Cerrar sesión
+          else
+            li
+              a(href="http://localhost:3000/login")
+                span(class="glyphicon glyphicon-log-in" aria-hidden="true")
+                |   Iniciar sesión
+            li
+              a(href="http://localhost:3000/registrarse")
+                span(class="glyphicon glyphicon-plus-sign" aria-hidden="true")
+                |   Registro

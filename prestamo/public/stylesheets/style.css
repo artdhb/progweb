@@ -1,0 +1,55 @@
+body {
+    background-image: url("../images/old_map.png");
+}
+.jumbotron {
+    background-color: #003428;
+    color: whitesmoke;
+}
+.navbar-static-top {
+    background-image: url("../images/zwartevilt.png");
+}
+.panel-heading {
+    background-color: #003428 !important;
+    color: whitesmoke !important;
+}
+.panel-body {
+    color: #2b2b2b !important;
+}
+.navbar-brand:link, .navbar-brand:visited {
+    color: whitesmoke !important;
+}
+.navbar-brand:hover, .navbar-brand:active {
+    color: #bbb !important;
+}
+#navbar li a:link, #navbar li a:visited {
+    color: #ddd !important;
+}
+#navbar li a:hover, #navbar li a:active {
+    color: #bbb !important;
+}
+hr{
+    border-color: #003428;
+    border-width: 2px;
+    margin: 18px 0;
+}
+thead{
+    background-color: #003428 !important;
+    color: #eee !important;
+}
+tbody{
+    background-color: #f2f2f2 !important;
+    color: #333 !important;    
+}
+tbody>tr:hover{
+    background-color:#389c90 !important;
+}
+#actuser li a{
+    color: #389c90 !important;
+    font-weight: bold;
+}
+.btn-primary{
+    background-color:#389c90 !important;
+}
+.btn-primary:hover{
+    background-color:#003428 !important;
+}

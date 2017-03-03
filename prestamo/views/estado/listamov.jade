@@ -1,0 +1,18 @@
+extends ../templates/default
+block content
+  div(class="container")
+    div(class="row")
+      div(class="col-md-12")
+        h2(class="header")= "Enlaces a movimientos"
+        hr
+    div(class="row")
+        div(class="col-md-3")
+        div(class="col-md-6")
+          div(class="panel panel-default")
+            div(class="panel-heading text-center")= "Enlaces"
+            div(class="panel-body")
+              ul(class="nav nav-pills nav-stacked" id="actuser")
+                each usuario in usuarios
+                  li(role="presentation")
+                    a(href="http://localhost:3000/movimientos/" + usuario.id)= "http://localhost:3000/movimientos/" + usuario.id
+        div(class="col-md-3")
